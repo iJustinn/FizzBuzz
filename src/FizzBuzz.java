@@ -5,30 +5,38 @@ class FizzBuzz {
 
     public static void main(String[] args) {
 
-        for (int i = 1; i < 100; i++) {
+        int i = 0;
 
-            // Find out which numbers divide i.
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
+        while (i < 100) {
 
-            // Print our appropriate result.
-            if (divisibleBy3 && divisibleBy5) {
+            doFizzBuzz(i);
 
-                System.out.println("Fizz Buzz");
+            i++;
+        }
+    }
 
-            } else if (divisibleBy3) {
+    private static void doFizzBuzz(int i) {
+        // Find out which numbers divide i.
+        boolean divisibleBy3 = i % 3 == 0;
+        boolean divisibleBy5 = i % 5 == 0;
 
-                System.out.println("Fizz");
+        // Print our appropriate result.
+        if (divisibleBy3 && divisibleBy5) {
 
-            } else if (divisibleBy5) {
+            System.out.println("Fizz Buzz");
 
-                System.out.println("Buzz");
+        } else if (divisibleBy3) {
 
-            } else {
+            System.out.println("Fizz");
 
-                System.out.println(i);
+        } else if (divisibleBy5) {
 
-            }
+            System.out.println("Buzz");
+
+        } else {
+
+            System.out.println(i);
+
         }
     }
 }
